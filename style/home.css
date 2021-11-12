@@ -1,0 +1,79 @@
+.content{
+  display: grid;
+  grid-template-columns: 60% 40%;
+  /* Definindo o display como grid
+  e colocando duas colunas no display
+   */
+   grid-template-rows: 11.4rem 1fr;
+   /* Acima estou criando duas linhas no meu display, sendo a primeira linha com o tamanho de 11.4 rem e o restante será dividido em 1 fração
+   ou seja, em uma parte */
+
+   grid-template-areas: 
+   'header header'
+   'left right'
+   ;
+   /* Definindo os identificadores de onde cada elemento vai ficar, trate isso como uma planilha de excel, que possui linhas e colunas */
+}
+
+header{
+  grid-area: header;
+}
+#bg{
+  grid-area: left;
+
+  background: url(../assets/home-bg-img.svg) no-repeat top/contain;
+
+  /* Propriedades do bg
+  no-repeat não se repetir
+  top fica no topo
+  contain fica dentro da div em que está */
+}
+
+main{
+  grid-area: right;
+
+  display: flex;
+  align-items: center;
+
+}
+
+/* No total foram criados quatro células
+acima estou adicionando cada tag a sua célula
+pense no grid como o seguinte:
+|   | A  |  B  | C |
+| 1 |  |  |  |  |  |
+| 2 |  |  |  |  |  |
+| 3 |  |  |  |  |  |
+
+Basicamente nossa estrutura de grid ficou assim
+
+ | header | header
+ | left   | right
+
+ Acima estamos atribuindo cada tag a sua posição
+*/
+
+main .container{
+  width: min(36.3rem 100%);
+  /* usando min() o valor usado sempre vai ser o menor, em comparação com o tamanho total */
+}
+main h2{
+  font-family: 'Poppins', sans-serif;
+  color: var(--black);
+  font-size: clamp(20px, 5vw, 2.8rem);
+  margin-bottom: 2.4rem;
+}
+
+
+
+input{
+  border: solid 0.2rem var(--grey-blue);
+  padding: 0 1.6rem;
+  
+}
+
+input, button, .button{
+  width: 100%;
+  margin-bottom: 1.8rem;
+}
+
