@@ -66,7 +66,7 @@ input, button .button{
 }
 
 button, .button{
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins';
   font-weight: 500;
   line-height: 0;
 
@@ -76,19 +76,23 @@ button, .button{
  
   background: var(--blue);
   color: var(--white);
+
+  transition: filter .2s;
   cursor: pointer;
+
   border-radius: 0.6rem;
 }
 
 button:hover, .button:hover{
   filter: brightness(1.2);
-  transition: filter .2s;
+  
 }
 
-button > img
+/* Código das imagens dos botões */
+button > img,
   .button > img{
     margin-right: 1rem;
-    width: 0.2rem;
+    width: 2rem;
   }
 
   button.outlined,

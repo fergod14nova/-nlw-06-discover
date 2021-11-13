@@ -73,7 +73,9 @@ input{
 }
 
 input, button, .button{
-  width: 100%;
+  width: clamp(363px, 36.3rem, 100%);
   margin-bottom: 1.8rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
