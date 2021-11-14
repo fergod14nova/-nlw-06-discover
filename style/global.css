@@ -30,6 +30,7 @@ html{
 body{
   height: 100vh;
   width: 100vw;
+  display: flex;
   background: var(--background);
   /* Ai em cima estamos usando a variável que foi criada para armazenar a cor */
 }

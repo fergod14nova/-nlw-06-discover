@@ -22,6 +22,7 @@ header{
   grid-area: left;
 
   background: url(../assets/home-bg-img.svg) no-repeat top/contain;
+  background-position: -10rem; /*fazendo a imagem recuar*/
 
   /* Propriedades do bg
   no-repeat não se repetir
@@ -34,6 +35,8 @@ main{
 
   display: flex;
   align-items: center;
+
+  margin-top: -11rem;
 
 }
 
@@ -54,9 +57,11 @@ Basicamente nossa estrutura de grid ficou assim
 */
 
 main .container{
-  width: min(36.3rem 100%);
+  width: min(36.3rem, 100%);
   /* usando min() o valor usado sempre vai ser o menor, em comparação com o tamanho total */
 }
+
+
 main h2{
   font-family: 'Poppins', sans-serif;
   color: var(--black);
@@ -79,3 +84,48 @@ input, button, .button{
   padding-bottom: 1.5rem;
 }
 
+/* SEPARADOR */
+
+.separator{
+  display: flex;
+  align-items: center;
+
+  margin: 4rem 0;
+}
+
+/* Selecionando a div 2 */
+.separator div:nth-child(2){
+  color: var(--grey-blue);
+  font-family: 'Poppins';
+  font-weight: 400;
+  padding: 0 1.35rem;
+  line-height: 0;
+}
+
+/* selecionando as divs 1 e 3 dentro da div com a classe.separator */
+.separator div:nth-child(1),
+.separator div:nth-child(3){
+  background: var(--grey-blue);
+  width: 100%;
+  height: 1px;
+}
+
+/* Criando bolas */
+.ball {
+  width: 21rem;
+  height: 21rem;
+  opacity: 0.1;
+  clip-path: circle(); /*transformando div em um circulo*/
+  background: var(--blue);
+  position: fixed; /*na frente de tudo e em cima de tudo*/
+}
+.ball.top{
+  top: -46rem;
+  right: -35rem;
+  width: 63rem;
+  height: 63rem;
+}
+.ball.bottom{
+  bottom: -15rem;
+  right: 5.6rem;
+}
