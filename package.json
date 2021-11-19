@@ -1,20 +1,24 @@
 {
   "name": "-nlw-06-discover",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projeto de perguntas usando NODE, projeto desenvolvido na semana do NLW da ROCKETSEAT, trilha Discover",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fergod14nova/-nlw-06-discover.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "JORGE LUIZ DE ALENCAR",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fergod14nova/-nlw-06-discover/issues"
   },
-  "homepage": "https://github.com/fergod14nova/-nlw-06-discover#readme"
+  "homepage": "https://github.com/fergod14nova/-nlw-06-discover#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
 }

@@ -1,0 +1,3 @@
+Iniciar projeto node --> npm init -y
+Instalar o EJS --> npm install ejs
+Instalar o express -->npm install express
