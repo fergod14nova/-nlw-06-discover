@@ -1,0 +1,132 @@
+.content{
+  display: grid;
+  grid-template-columns: 60% 40%;
+  /* Definindo o display como grid
+  e colocando duas colunas no display
+   */
+   grid-template-rows: 11.4rem 1fr;
+   /* Acima estou criando duas linhas no meu display, sendo a primeira linha com o tamanho de 11.4 rem e o restante será dividido em 1 fração
+   ou seja, em uma parte */
+
+   grid-template-areas: 
+   'header header'
+   'left right'
+   ;
+   /* Definindo os identificadores de onde cada elemento vai ficar, trate isso como uma planilha de excel, que possui linhas e colunas */
+}
+
+header{
+  grid-area: header;
+}
+#bg{
+  grid-area: left;
+
+  background: url(../assets/home-bg-img.svg) no-repeat top/contain;
+  background-position: -10rem; /*fazendo a imagem recuar*/
+
+  /* Propriedades do bg
+  no-repeat não se repetir
+  top fica no topo
+  contain fica dentro da div em que está */
+}
+
+main{
+  grid-area: right;
+
+  display: flex;
+  align-items: center;
+
+  margin-top: -11rem;
+
+}
+
+/* No total foram criados quatro células
+acima estou adicionando cada tag a sua célula
+pense no grid como o seguinte:
+|   | A  |  B  | C |
+| 1 |  |  |  |  |  |
+| 2 |  |  |  |  |  |
+| 3 |  |  |  |  |  |
+
+Basicamente nossa estrutura de grid ficou assim
+
+ | header | header
+ | left   | right
+
+ Acima estamos atribuindo cada tag a sua posição
+*/
+
+main .container{
+  width: min(36.3rem, 100%);
+  /* usando min() o valor usado sempre vai ser o menor, em comparação com o tamanho total */
+}
+
+
+main h2{
+  font-family: 'Poppins', sans-serif;
+  color: var(--black);
+  font-size: clamp(20px, 5vw, 2.8rem);
+  margin-bottom: 2.4rem;
+}
+
+
+
+input{
+  border: solid 0.2rem var(--grey-blue);
+  padding: 0 1.6rem;
+  outline: none;
+  
+}
+
+input, button, .button{
+  width: clamp(363px, 36.3rem, 100%);
+  margin-bottom: 1.8rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* SEPARADOR */
+
+.separator{
+  display: flex;
+  align-items: center;
+
+  margin: 4rem 0;
+}
+
+/* Selecionando a div 2 */
+.separator div:nth-child(2){
+  color: var(--grey-blue);
+  font-family: 'Poppins';
+  font-weight: 400;
+  padding: 0 1.35rem;
+  line-height: 0;
+}
+
+/* selecionando as divs 1 e 3 dentro da div com a classe.separator */
+.separator div:nth-child(1),
+.separator div:nth-child(3){
+  background: var(--grey-blue);
+  width: 100%;
+  height: 1px;
+}
+
+/* Criando bolas */
+.ball {
+  width: 21rem;
+  height: 21rem;
+  opacity: 0.1;
+  clip-path: circle(); /*transformando div em um circulo*/
+  background: var(--blue);
+  position: fixed; /*na frente de tudo e em cima de tudo*/
+}
+.ball.top{
+  top: -46rem;
+  right: -35rem;
+  width: 63rem;
+  height: 63rem;
+}
+.ball.bottom{
+  bottom: -15rem;
+  right: 5.6rem;
+}
