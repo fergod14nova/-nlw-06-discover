@@ -15,6 +15,9 @@ server.set('views', path.join(__dirname, 'views'))
 server.use(route)
 // Atribuindo o arquivo route para o servidor
 
+// falando para o node que estamos usando a pasta public, dito isso  os arquivos CSS e IMG serão vistos pelo site
+server.use(express.static("public"))
+
 // Iniciando...
 server.listen(3000, () => console.log("Server rodando..."));
 //listen define a porta
